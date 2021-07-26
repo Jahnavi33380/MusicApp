@@ -1,1 +1,115 @@
-<p>register works!</p>
+
+<!--
+<p class="display-4 text-center text-info m-5">Signup here</p>
+    <form #ref="ngForm" (ngSubmit)="onSignup(ref.value)" class="w-75 text-dark mx-auto mt-5">
+    <div class="form-floating mb-3">
+        <input type="username" class="form-control" id="username" placeholder="name@example.com" name="username"
+            ngModel required/>
+        <label for="username">Username</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password" ngModel>
+        <label for="password">Password</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" ngModel>
+        <label for="email">Email </label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" id="dob" placeholder="Email" name="dob" ngModel>
+        <label for="dob">Date of birth ret4e5y67</label>
+    </div>
+
+    <input type="file" name="photo"  class="form-control" ngModel (change)="selectFile($event)">
+    <button class="btn btn-success" type="submit">Signup</button>
+</form>-->
+
+
+
+
+
+
+<body>
+    <div class="container">
+    
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">    
+              
+           
+          <div id="container" class="mt-5 text-white">
+             <header><b>Register new account</b></header>
+             <form #ref="ngForm" (ngSubmit)="onSignup(ref.value)" class="w-75 text-dark mx-auto mt-5">       
+                <fieldset>
+                   
+                   <input type="text" name="name" id="name" placeholder="Name"   ngModel required/>
+            
+                   <br><br>
+                   
+                   <input type="email" name="email" id="email" placeholder="E-mail"  ngModel required pattern="[A-Z a-z 0-9 .]*@gmail.com" #ref3="ngModel">
+                   <h5 class="Username" *ngIf="ref3.invalid && (ref3.dirty || ref3.touched)" class="alert alert-danger">
+                        <div *ngIf="ref3.errors?.required">
+                                         *Email is required.
+                        </div>
+                        <div *ngIf="ref3.errors?.pattern"> *Not a valid Email Id
+                        </div>
+                    </h5>
+                   <br><br>
+                  
+                   <input type="text" name="username" id="username" placeholder="Username"   ngModel required #ref1="ngModel">
+                   <h5 class="Username"*ngIf="ref1.touched&&ref1.invalid" class="alert alert-danger">
+                       <div>
+                    *Username is required
+                    </div>
+                   </h5>
+                   
+                   
+                   <br><br>
+                   
+                   <input type="text" name="password" id="password" placeholder="Password"  ngModel required pattern="[ A-Z a-z 0-9 . !@#$%^&* +]{8}.*" #ref2="ngModel">
+                   
+                   <h5 class="Username" *ngIf="ref2.invalid && (ref2.dirty || ref2.touched)"
+ class="alert alert-danger">
+ <div *ngIf="ref2.errors?.required">
+ *Password is required.
+ </div>
+ <div *ngIf="ref2.errors?.pattern"> *Minimum length of 8 characters is required
+ </div>
+</h5>
+<br><br>
+                   <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" ngModel required pattern="[ A-Z a-z 0-9 .]{8}.*" #ref4="ngModel">>
+                   <h5 class="Username" *ngIf="ref4.invalid && (ref4.dirty || ref4.touched)"
+ class="alert alert-danger">
+ <div *ngIf="ref4.errors?.required">
+ *Password is required.
+ </div>
+ <div *ngIf="ref4.errors?.pattern"> *Minimum length of 8 characters is required
+ </div>
+</h5>
+                   
+                   <br/><br>
+                   
+
+                   <label for="img" class="hey1 text-left text-white"> Upload Your Picture</label>                   
+                   <input  type="file" name="img" id="img" placeholder="image" class="marginu" ngModel (change)="selectFile($event)">
+                   <br/>
+                   <br>
+
+
+                   <button class="btn btn-success" type="submit">Signup</button>
+                    
+           
+                                  </fieldset>
+             </form>
+          </div>  
+         
+        </div>
+      </div>
+      </div>
+      
+      </body>
+      <br>
+      
+    
+    
+    
+                                                                                                                                                                         

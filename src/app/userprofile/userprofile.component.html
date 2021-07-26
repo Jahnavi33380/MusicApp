@@ -1,0 +1,51 @@
+  <!--
+
+<div class="text-center text-white">
+
+    
+    <button class="btn btn-primary" (click)="getPrivateData()">Get Private data</button>
+</div>
+-->
+
+<div class="container text-center">
+    <div class="row form-group">
+       <div class="col-sm-9" style="padding-left: px;">
+
+
+          <h1 class="title " >
+            Welcome <br>
+            <br>
+             {{userObj.name}}
+    
+          </h1>
+       </div>
+       <div class="col-sm-2">
+         <img src="{{userObj.profileImage}}" width="100%" alt="">
+          
+       </div>
+     <div class="col-sm-1 text-end my-auto" >
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" >Signed in as <br>{{userObj.email}}</a>
+          </div>
+        </div>
+       </div>
+    
+    
+       
+       </div>
+    
+       <h2 class="text-center text-light">Imagine you are in a boring class lecture , what will make ur mood good ?</h2>
+        <h2 class="text-center text-light">Enjoy the moment while u r listening to songs ......</h2>
+      
+      
+    
+    
+    <button class=" btn-success nav-link text-light link text-center d-block container" routerLink="/browse" routerLinkActive="active"><i class="fas fa-search"></i>Browse</button>
+     
+    
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,241 @@
+
+.container{
+    background-color:rgba(22, 19, 19, 0.938);
+    margin: 1px;
+    border-radius: 12px;
+    border: 2px solid rgb(8, 8, 61);
+
+}
+
+.container1{
+    border-radius: 12px;
+    border: 2px solid rgb(8, 8, 61);
+    background-color: rgba(20, 19, 19, 0.342);
+   }
+
+.blur{
+    background: rgba(44, 8, 8, 0.027); 
+    backdrop-filter: blur(3px); 
+}
+
+
+
+
+
+
+/*carousel1 for music*/
+.carousel {
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+  }
+  .carousel__container {
+    white-space: nowrap;
+    margin: 30px 0px;
+    padding-bottom: 10px;
+  }
+  .carousel__item[data1] {
+      margin-left: 100px;
+    background-color: palevioletred;
+    background-image:url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Queen_%28film%29_Soundtrack_Cover.jpg/220px-Queen_%28film%29_Soundtrack_Cover.jpg');
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .carousel__item[data2] {
+    background-color: palevioletred;
+    background-image: url('https://www.filmibeat.com/img/popcorn/movie_posters/master-20210113110407-18364.jpg')  ;
+    width: 200px;
+   
+    margin-left:100px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .carousel__item[data3] {
+    background-color: palevioletred;
+   
+    width: 200px;
+   
+    margin-left:100px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .carousel__item[data4] {
+    background-color: palevioletred;
+   
+    width: 200px;
+   
+    margin-left:100px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+  }
+  .carousel__item:hover ~ .carousel__item{
+    transform: translate3d(100px, 0, 0);
+  }
+  .carousel__container:hover .carousel__item {
+    opacity:  0.3;
+  }
+  .carousel__container:hover .carousel__item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+/* ad */
+.intro{
+  color:black;
+  border-radius: 12px;
+  border: 2px solid rgb(8, 8, 61);
+  padding: 1px;
+  height: 200px;
+  width:100%;
+}
+.intro1{
+  
+    border-radius: 12px;
+    border: 2px solid gold;
+    }
+
+/*end of ad*/
+
+button{
+  color: rgb(207, 204, 17);
+border: 2px solid rgb(197, 194, 10);
+border-radius: 12px;
+background-image: url('https://mlpforums.com/uploads/post_images/img-3425485-1-agnes.jpg');
+}
+
+
+/*ad2*/
+.ad1{
+background-image: url('https://i.huffpost.com/gen/659532/thumbs/r-PIXARS-BRAVE-large570.jpg?4');
+backdrop-filter: (1)px;
+padding: 3px;
+color:gold;
+
+}
+/*end of ad2*/
+
+
+@include media-breakpoint-only(lg) {
+  .card-columns{
+    column-count: 4;
+  }
+}
+
+
+@include media-breakpoint-only(xl) {
+  .card-columns{
+    column-count: 5;
+  }
+}
+
+
+/*carousel 2 for artist */
+
+ul{
+
+top:0px;
+left:0;
+width:100%;
+height:200px;
+background:#ccc;
+margin:70;
+padding:1px;
+border-radius: 12px;
+border: 2px solid rgb(8, 8, 61);
+}
+ul  li
+{
+list-style:none;
+position:relative;
+width:20%;
+height:100%;
+border-right:1px solid black;
+float:left;
+box-sizing:border-box;
+transition:0.5s;
+text-align:center;
+overflow:hidden;
+}
+ul li:nth-child(1)
+{
+background:url("https://i.scdn.co/image/ab6761610000e5eb26dbdbdacda5c30dc95e0c2c");
+background-size:cover;
+background-position:left;
+}
+ul li:nth-child(2)
+{
+background:url("https://s.france24.com/media/display/78bad01c-0766-11e9-bc4f-005056a964fe/w:1280/p:1x1/dua_lipa.jpg");
+background-size:cover;
+background-position:left;
+}
+ul li:nth-child(3)
+{
+background:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBITEhISEhIYGRIZGBgYGBkYGBgZERgYGRgZGRkYGBgbIS0kGx0qHxgYJTclKi4xNDQ0GiM6PzozPi0zNDEBCwsLEA8QHRISHTMhIyMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAAAQIDBAUGB//EAEAQAAIBAgQDBAcHAQYHAQAAAAABAgMRBAUhMRJBUSJhcYEGEzKRobHwQlJywdHh8TMHFSRDYoIjNJKissLSFP/EABsBAAIDAQEBAAAAAAAAAAAAAAABAgMEBQYH/8QAMREAAgIBAgMGBQIHAAAAAAAAAAECEQMEIRIxQQUiUXGBsTJhkaHB0fATFCMkQoLx/9oADAMBAAIRAxEAPwDycAA2GYAAAAAAAAAAAAQwJ0aTm7IAKwSvsbfBZTGpPhc+ytZNW2va1+RsHQpRjKT0jtCK7ub1+rd5bHBKW5RLURTpbnNqnLoxerl0Nli8euD1cNLvfnw6387mG6yVNQXtN6v68viJwSfMti5NcjHsMU56W/kjGRWTokIkAAIiSExARGIAGAAAgAQwAYhEiIDAAAQFwABMrAAAAAAAAAAAAIm1w0FGmm1q3q+is3+5i5dhXUqRX2U05X2t077l+Y1ZJ8C5Nt26u6fwZdiVJzZVkfFJQXmzIhilSpqEXecnxTfk0o+CtfzMHEVW0tb35c/ExGxcbJSyXsShiS3LElsJy1RDiYJlDZpiDQpRsDY9xkXsQuTi7kGgTIg1ZaJiGxECIhiAYwABAIYCAYyDJCYwEAAIZcAASorAAAYAAMBAAAAAbDKq/q3Kfw8mr+XEYmIm22+9ic7Jdy+vmZ2Q5TUxmIp0Ibyd5S+7Be1J+C+LRcn3VErpRbm/3RXlOT4jFTcaFNyt7UtoR/FL8jssH/ZtU4eKtUV/ux5ebPTctyqlhKMKVOKjCK82+bk+bfUWJxUFe8hpLorME9ZNy27q+/qeb1PQanBe18DXYn0ZpLxO9xuMhLRSNNiordHO1EnF7M9t2Vjjlxpzin6I85x+Typ7ao1koOO6O7zFJpnI41ast0+RzW5k7V0kcEk48ma5iGDRczlkoyJsqRaREyLEMQCGAgAAAAAAExgAyIAAhlwABMrAAAABgACYAAAgQEZyPSfRDF0cswssVXt/+isl6uC/qKmvZbXLievhwnA4KipVIcSuuJade43uOy2pJTqVZq6aSi73d+nkaMULTZk1M06g3Sf18kdLiPTqdWSsuHojVZ1mtbZSab3F6M5C5/4qu+HCU3du3aqyj9iC6dZctt9td6QZn6+tKcYcMdklyS2J8dKiiGmj/E7v6mJ/eGKbtGo/h82bDD1cdLaSfmvcaqdS0VZPvsvzNng81hBJcFRd7i//AFucvU8V7Kz23ZUcdVKbXrS9iypjKns142lspfZfiaLMoWdzqHVVaDTs18DR5jS1aIaWfeou7awNYlK7S5PqaCwmWVFZtFZuPMoRZEqZbT2IBLkNkSTEBEQxDABAAAACYxMBiAAEMtAYErKxAMAsBDAAAAQACA2GEj/RafadWMbeMlY7LMcqxVfEwpSUoYfiim42SUdpS4ucuG/maP0FwMa2Lg5rsU2qr8Yvsr/q1/2s9fzqKqYWtCnG9WVOcY23u47J8r7eZphKo14nM1LrKmqtXz+ZwHpX6QwqU4UKCUMPC0IxXSOmpxkoWavz2DFJaRqNylvJPe72u+b11IUbcHApN63V949wPwNWKPCjaZfh7vY6Cng3bTQ02WVeFq50MK9zna2KR6rsLLJ2kY1XDNI5/MYas66Sujm84ha5j08qmdvtOHHp5HK4yPaMVmZjN0QjgptXtZdW9DrtNvY8MmktzFLaexZWwrgr3TXPRr57kILQg1QNprYQEiIhCAYAAgAAABDIgNDAQERloCAmQGAhgIAAAAAGIEB2v9nEu3ievDTfxmdjnOaqFNUYTtVqaOSt2IW1WvN/nyOG/s9qJYirF7Spr/tl+jZTVVTFY1w42oucuKS+zBXcmru23zNWOqV7nKzwvNN3SStv0KMxlhnw+rheVmpScptO2istFffX4I1qilrHfp+nU22ZUsvheNL18pLS8qkbeLSgrmonRfJfEJmvFXD1/wBjLwmKu0nudPgZ3SOLp02pK+90dDh8W4+G3y/gwaxXE9D2JNQytHTLY5vPJrU2Trya1lpbhfTW1nfvTTOZzVtttv8ATc52Fd9HqNfPh08vmapdqa8TZwk78OjitbXad1bRPrrfXoa/CU3KdlvyNzRoKEG1d3d22lxLvR3catHzzO0mY2PS4J3d7xuvNNa+djTmVjq15cK27+i/dmKVze5LHGoiEMRAsAQxCAAAAACJIQDQgACIy0CJIkQAQxAAwAYxAIBjA3HoviPV4qnJ7ao22HlwxxHA7VJtq63UeiOWoVHCcZLdM3+Gxkabc9Nb+Wm/vNOGW1GHVYm3xLrX2ZpamFkpNSvxX5mTSpJInisXxybZiTrProtveLZPYvXHJKyzEz1Rm4XEpxSfj5pfwaac73LKMntyf0zNmXEjpaDI8U0zpqeITgk3ro1000XyfwNRmHJbd3iiUK/CvCPD/C95hV6nE+9nOxwqVnpNZqVLDw9Sqi2ndOzTvclWzWpJOOi70hONkzXs6ak0tjykopy3LKerbZMUFoMgJ8xAAgEAAAAAAAAIQwESEAAIZYAATKwACQAAgAYhjABgBLjdrEQCwJxuKUWZ+V4D10avD7cEpLo02018imph5J2bLFHayv8AiR4nG90YnCiVOXQuWFfMzsHl6k1fYpy7Rtm3SReTIox5mIoN/N8lYzqOBaXFJeBucNl8I7LzDHQtE5jzW6R66HZqjDinuzl8TzNYbLF7swZUZRs5JpPVd6OknseRntNjABAUDEAAAAAAACAQDAbEAhgAAIZahiQywrEAxAIAAAAkBEBgAANsQHc+h2RzWGqY1zXDO9OMEruykrzk+WsbJGBmuGSu7apm5/s/xVWlQrp9qClGTpvVqM4u77r8KdjOzXDYSsnKE3Tm1rG14e7dfWhsxxajTRxs2WtQ3f8Aw4S6M3LpoUskqKTXrKbjyacm7eDSNxlOSU01x1JP8KUV8bmXPCTg9jvdmZ8cc8WnZfC1r8hzy2rVXZi0vvS7MPfu/K50uDoUIJcNNNrm+0/eyeKqSktXZHGWKnue7nq3KNRVeZwuKyqlQ1k+Ofeuwn3L9Tm86nJyi3yuvf8AwdjnXU5HOI9lPrL8mdnE/wCmeE1keHVGsTAgnYsjrsQoi1QgHYQhCAAAkIAAQAAxAAAACGTRMgSLCAxBclTpuTsvPol1Y0m9kIRlUcurT2hZdZafubPL8Aorifve7/RGxZ0MWhtXN+hhy6ynUDSRyafOa8k2WxyaPOo/JI2cplUpmhaTCun3ZR/MZX1MT+6KS5zfmv0KcZSo0kmo3n9m7b16tbGXXxChFybNNSpSrzlJ7Lfw6FGdY8aqEVxP92X4VN3Kcnwr7/I7n0ApSjRxFSftVJRl38KUkvjczsfh07yWhlZNhXGnUUY7SjDRbqEEl1vv1fizFxjkk7qxDHtE5eeXFlk0aabsZuWz1NdVlqWYCfaIZlcWdHs6VZos6/Dy0FiJ6FGFnoWVdjgS5n0XHvE5zNlozkc6lpBd7+C/c7TM4ppq+vxOJzyS4oR6Jv3v9jo4Jdxnme0Yf3CZqhxECJmYsjImplKHckm0RaRkKfVL3IOy/sopTGpE+Ihwl3q4vqNYZP7XwKeMfGFQ6oVS8SU8Pb7S+KKpQa3HKYqktI+BXKMehKN9SIEeICqmWUWjEBIrJRi20luzfZbhUkm9Vuv9T+8+7p7zXZZSi25zdorS7+Xnt7zeSxKWx09FiSXHIw6rI74IleY1nGm7aN6IroYpOKUn2ktf1MLMMQ5NJP6ZiRv5p3X6F2TO1PYjjwJwpm39c5O0duop1YwXV/W5h+tdui6L2v2MfEztG7/2rlfqKWak2OOG2kUYutKpOy25HQejOHamopXaab36q+2vu1NZluDt25bvY7T0fwPDTq1pL7DtfayV233GGKbucubseozJVjj4r3OiyXEzjQutJcUr8Sum7vdaa+D9+7ji8yhZ+soX74NO/lJJoycmglhqem7k34uUn0XyRViaMHysWpI5E33mc7i8ThJXtTmn+Bf/AEYEatNS7MJL8Vl8rm9rYRcv3NbXwquSlG0W4MqjJP8AJn4WorLVLzLpzj1v4XMbDUUkXypnDz43GR9I0Gojkxpo1uOlZPSy6I89x9XjqSl9fLTwOz9IKjbVCD7ctX/pjzbXSyfnY4jEJKUktk7e7T8i3T8jmdpyTyJLoViGI0HNAdwBAADuRAAJARAYDYm9EIYhkQACJIvARKO/xEikvlLilTpx2i7vve7fzMuVUxMuhpOb/CvPV/kSnI345tQ4vH2WyKJRTlXh+eYnK7bHGQkySEhstprm9iiknVqL7q+QYqdo2XM2WV4bhitO0wm+KSh05sjKXBBy6vZG0weFc5xgvPuR27w6hh5xS2g/gr+W26MHIsu4I8TXaZu3G6s9uZOS2o4csveTXQwcnrJ0IqL2co6Wto391226F0nfxNdkUmlVpyfajKz1d9OzzbduzflvZbGySFB3FMWeNZJL5++5i1Y3MWpTW5sZoxakbu38DsjFFOHWpPMMTGlTlUlyTsurtew21C7bst2+SRoXVljKsbL/AIMX2V97btSTWmv5HP1S3s9b2Nnk48Eeft82V4bDScKtWftyUnz7MbaKz2vZPz7jhK/tT/FL5s9bxGGUaM492rPJJu7b6tsr08ai2zb2g48UYx5Je75+pAQwLznisAxCASGKIMEMBAMAEMBCsAAAIki0fKXgItpQ4rLrJe5aslFW6RSZUY8MIR7rvxepjSmXYmepizepqyyS2XTYrgr3fUkpFkGUonKVkQjLqSaLcNT46q+7HVnd+j+XcT45LTl+pzPo7g3JR6zd/L6+Z6Pg6ahFRRbiVLi8dzk6/LcuBdDLppJJIcplTmUymTOcazG1fU4mNX/LqWjLRtKTsrvkk0otye3BpuzZevXXv8TDx9KNSnKE0mnysvLuOeWYVsM1Tqx46d0k3fiSu2+3r3aWfwsQ+Hy9jXCCzRSTqS281+q5fQ6idVvwCc1GLcmkur+BzL9J4W7NKXFZb7JtbaLW2nMxW8TjH2laDurf5dny4dm/9W4uO/hVklpZR3yNRXpZZmmYyxM1Spp+rvts5tNaz5xSadl4Ppbp8kwUaUEvtNa/p4GJl+WQpR2vJ7t7s2NKoV5Me1vdm/Raup8ENo+5ZmTtSqPpFv4HjHJHrmfVLYTEPpTn8meSMz4/hZ2NS7mvJe7IjEMsZnEKQyMmRYIEDGRAYDABAIQxERgAAAy4yMKtb9E/j/DMYzMOrQb+vrcuwLv+RnyfCU15alT3HOWokxSdsklSJRCetkubsSRLBR4qsei1930hvw8RXVvwO59GsOlqtopJHUpml9H4Wpp9dTbznZGw81ldzbHKZjzqX5kKtWxiur3joSRlRd2Orh4z0kkyqnPncujNWATZjRyyinfgV/AzaVJLZWKlULlN238wItt8xVGYnrLMtqT3NZXqapkJq0a9I6mmX+kVX/BYn8DXvaR5g2d/6Q1b4Oqu6P8A5I8/ZhjsvU9RldyXkvdiYrgwGVBcixkRMEMYAAARGIVkgESIsTAAGAuIC0zF/TX11ADRg5vyM+Tp5mE9xxACrqTLHsXZV/U/2v5oALP8kQn8Ej0nI/6UfAyquyADaeZfNmHV9l+LMdb/AF3gAycSyO/u+ZkS9lgAEWCLZcvD9BgBEpns/rma2vu/EAIS5GjT8zAzr/lJ/XNHFABh6fU9O+a8l+RMGAARYiKACLBEgABkiIwAGACYAREAABWM/9k=");
+background-size:cover;
+background-position:left;
+}
+ul li:nth-child(4)
+{
+background:url("https://img.mensxp.com/media/content/2018/Aug/mensxp-exclusive-interview-with-badshah-1400x653-1534515223.jpg?w=820&h=540&cc=1");
+background-size:cover;
+background-position:left;
+}
+ul li:nth-child(5)
+{
+background:url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ariana-grande-attends-the-62nd-annual-grammy-awards-at-news-photo-1588961015.jpg?crop=1.00xw:0.667xh;0,0.0624xh&resize=480:*");
+background-size:cover;
+background-position:left;
+}
+ul:hover li
+{
+width:10%;
+}
+ul li:hover
+{width:60%;
+}
+
+ul li .content
+{
+position:absolute;
+bottom:-100%;
+left:0;
+width:100%;
+background:rgba(0,0,0,.8);
+box-sizing:border-box;
+color:#fff;
+opacity:0;
+}
+
+ul li:hover .content
+{
+bottom:0;
+transition:0.5s;
+transition-delay:0.5s;
+opacity:1;
+}

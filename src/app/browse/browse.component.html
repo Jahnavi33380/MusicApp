@@ -1,0 +1,64 @@
+<div class="row">  
+    <input type="text" name="name" placeholder=" Search by Songs" class="form-control mt-3" [(ngModel)]="searchTerm">
+
+    <div class="content">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 mx-3 p-5">
+        <mat-card class="example-card col" *ngFor="let file of files | search : searchTerm; let i = index" (click)="openFile(file, i)">
+          <img mat-card-image src="{{file.img}}" height="200px"> 
+          <mat-card-content>
+            <h4 class='name'mat-line>{{ file.name }}</h4>
+            <h5 class='name'mat-line>by {{ file.artist }}</h5>
+          </mat-card-content>
+          
+          <mat-card-actions>
+            <button type="submit" class="btn-success" mat-button (click)="onSongSelect(file)">Add to Playlist</button>
+          </mat-card-actions>
+        </mat-card>
+        </div>
+        </div>
+        <br>
+    
+
+    <div class="player" *ngIf="playStatus">
+        <div class="media-footer" >
+      <mat-toolbar color="primary" >
+        <div class="row">  
+        <div class="col-2">
+          <h6 class='name1'>{{currentFile.file.name }}</h6>
+          <h6 class='name1'>{{currentFile.file.artist }}</h6>
+        </div>
+        <div class="keys col-10">
+        <mat-toolbar-row class="media-action-bar">
+          
+          <button mat-button [disabled]="isFirstPlaying()" (click)="previous()">
+            <mat-icon mat-list-icon>skip_previous</mat-icon>
+          </button>
+          <button mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing">
+            <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+          </button>
+          <button mat-button (click)="pause()" *ngIf="state?.playing">
+            <mat-icon mat-list-icon>pause_circle_filled</mat-icon>
+          </button>
+          <button  mat-button [disabled]="isLastPlaying()" (click)="next()">
+            <mat-icon mat-list-icon>skip_next</mat-icon>
+          </button>
+          
+
+        </mat-toolbar-row>
+        
+        <mat-toolbar-row>
+          <h4 class='name1'>{{state?.readableCurrentTime }}</h4>
+           <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider>
+          <h4 class='name1'>{{state?.readableDuration }}</h4>
+        </mat-toolbar-row>
+      </div>
+      </div>
+      </mat-toolbar>
+    </div>
+  </div>
+</div> 
+
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>

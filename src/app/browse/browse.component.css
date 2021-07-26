@@ -1,0 +1,64 @@
+.container 
+    .main-toolbar 
+      .spacer {
+        flex: 1 1 auto;
+      }
+      .toolbar-btn {
+        font-size: 16px;
+        margin-right: 5px;
+        cursor:pointer;
+      }
+  
+    .content{
+      height: 5100px;
+    }
+      .logo {
+        margin: 2.5rem;
+        text-align: center;
+        font-size: 24px;
+        
+      }
+.content.mat-icon{
+      height: 160px !important;
+      width: 160px !important;
+      font-size: 160px !important;
+    }
+.media-footer {
+   position: fixed;
+      bottom: 0;
+      height: 100px;
+      width: 90%;
+}
+.time-slider {
+        width: 100% !important;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+.media-action-bar {
+        display: inline;
+        width: 100%;
+        padding: 1rem;
+        justify-content: center!important;
+}       
+.name1{
+  font-size:medium;
+  text-align: left !important;
+  padding-left: 5px !important;
+  margin-top: 5px;
+}
+.col{
+  margin:10px;
+  width:250px;
+}
+.example-card{
+  transition: transform 0.2s ease;
+  margin-left:50px;
+}
+.example-card:hover{
+  transform: scale(1.1);
+  cursor:pointer;
+}
+.keys{
+  display: block;
+  text-align: center;
+}

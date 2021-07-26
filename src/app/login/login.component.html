@@ -1,2 +1,142 @@
-<p>login works!</p>
-<h1>Hello everyone</h1>
+<!--<h2 class="text-center text-dark mt-5">Login form</h2>
+
+<div class="row">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form class="text-dark" #ref="ngForm" (ngSubmit)="ref.form.valid&& onLogin(ref)">
+            <div class="mb-3">
+                <label for="un" class="form-label">Username</label>
+
+
+                <input type="text" class="form-control" id="un" name="username" ngModel required minlength="4"
+                 #refUsername="ngModel" autocomplete="off">
+
+                <p class="text-danger" *ngIf="(ref.submitted||refUsername.touched)&&refUsername.errors?.required">
+                    *Username is required</p>
+               <p class="text-danger" *ngIf="(ref.submitted||refUsername.touched)&&
+               refUsername.errors?.minlength">* Minimum length of four characters is required</p>
+           
+            </div>
+            <div class="mb-3">
+                <label for="pw" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pw"  name="password" ngModel 
+                required pattern=".*" #refPassword
+                 ="ngModel">
+                 <p class="text-danger" *ngIf="(ref.submitted||refPassword.touched)&&refPassword.errors?.required">
+                     *Password is required</p>
+                <p class="text-danger" *ngIf="(ref.submitted||refPassword.touched)&&
+                refPassword.errors?.pattern">* Pattern not matched</p>
+            
+
+
+
+            </div>
+        
+           
+        
+            <button type="submit" class="btn btn-success d-block mx-auto m-4">Login</button>
+        </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+</div>
+
+
+<div class="text-center">
+    <input type="text" name="name" #r ngModel minlength="3" autocomplete="off">
+    <h3 class="text-dark">{{r.className}}</h3>
+
+</div>
+<p class="display-4 text-center text-secondary m-5">Login here</p>
+<form #ref="ngForm" (ngSubmit)="onLogin(ref.value)" class="w-75 mx-auto mt-5">
+    <div class="form-floating mb-3">
+        <input type="username" class="form-control" id="username" placeholder="name@example.com" name="username" 
+            ngModel>
+        <label for="username">Username</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password"  ngModel autocomplete="off">
+        <label for="password">Password</label>
+    </div>
+  
+    <button class="btn btn-success" type="submit">Login</button>
+</form>-->
+<!--
+
+<p class="display-4 text-center text-secondary m-5">Login here</p>
+<form #ref="ngForm" (ngSubmit)="onLogin(ref.value)" class="w-75 mx-auto mt-5">
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="type" id="admin" ngModel value="admin">
+        <label class="form-check-label" for="admin">
+            Admin
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="type" id="user" ngModel value="user">
+        <label class="form-check-label" for="user">
+            User
+        </label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="username" class="form-control" id="username" placeholder="name@example.com" name="username"
+            ngModel>
+        <label for="username">Username</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password" ngModel>
+        <label for="password">Password</label>
+    </div>
+
+    <button class="btn btn-success" type="submit">Login</button>
+</form>-->
+<body>
+  
+    
+<div class="container">
+    <div class="login-wrap">
+      <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Log In</label>
+        
+        <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">
+            
+        </label>
+        <div class="login-form">
+          
+          <form #ref="ngForm" (ngSubmit)="onLogin(ref.value)" class="w-75 mx-auto mt-5">
+            
+          <div class="sign-in-htm">
+            
+            
+       
+            <div class="group">
+                
+                
+                <label for="username" class="label">Username</label>     
+                <input type="username" class="input" id="username" name="username" ngModel required> 
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Password</label>
+              <input id="password" type="password" name="password" class="input"  ngModel required>
+             </div>
+             
+            <input  type="radio" name="type" id="user" ngModel value="user" required>
+            
+            <label  for="user">
+                
+                I agree to terms and conditions
+            </label>
+            <div class="group"> 
+                <br>
+                <br>            
+                <button class="btn btn-success" type="submit">Login</button>
+            </div>
+  
+            <div class="hr"></div>
+          </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  </body>
